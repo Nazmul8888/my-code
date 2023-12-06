@@ -3,8 +3,9 @@
 const Banner = () => {
     return (
         <div>
-            this is banner
+           <img src="https://i.ibb.co/LCRBS7z/technology-communication-icons-symbols-concept.jpg" alt="" />
         </div>
+        
     );
 };
 

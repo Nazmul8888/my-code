@@ -15,16 +15,15 @@ const styles = StyleSheet.create({
 const About = () => {
     return (
         <Document>
-    <Page size="A4" style={styles.page}>
       <View style={styles.section}>
-        <h1>Nazmul khan</h1> 
+        
         <img  src="https://i.ibb.co/ySRBhDL/Whats-App-Image-2023-12-06-at-11-34-41.jpg" alt="" style={{ borderRadius: '50%', width: '150px', height: '150px' }} />
       </View>
-      <View style={styles.section}>
-         <h1>MOHAMMAD NAZMUL ALAM</h1> <br />
-          E-mail: nazmulalam381@gmail.com <br />
-          Address: House# 17/A, Road # 6,Shekertek,Adabar, Dhaka-1207 <br />
-          Mobile: +88 01709-413651
+      
+         <h1 className='font-bold text-green-300 text-3xl'>MOHAMMAD NAZMUL ALAM</h1> 
+          <p  className=' text-xl '>E-mail: nazmulalam381@gmail.com</p> 
+          <p className=' text-xl'>Address: House# 17/A, Road # 6,Shekertek,Adabar, Dhaka-1207</p> 
+          <p className='text-xl'>Mobile: +88 01709-413651</p>
           <br />
           <br />
           <hr />
@@ -32,53 +31,43 @@ const About = () => {
 
 
 
-<h1 className='text-bold'>ACADEMIC QUALIFICATIONS</h1>
+<h1 className=' text-2xl text-red-400 font-bold'>ACADEMIC QUALIFICATIONS</h1>
 <p>
-Masters of Business Administration	Graduation year: 2012
-Jagannath University | Major: Accounting &Information Systems	CGPA: 3.42/4
-
-Bachelor of Business Administration	Graduation year: 2011
-Jagannath University | Major: Accounting & Information Systems	CGPA: 3.53/4
-
-Higher Secondary Certificate	Accomplishment year: 2007
-Chainir Anjuman Ara School & College | Major: Business Studies	GPA: 4.60/5
-
-Secondary School Certificate	Accomplishment year: 2005
-Basudeb High School | Major: Business Studies	GPA: 3.81/5
-
-PROFESSIONAL QUALIFICATIONS
-CA- CC Under supervision of Mohammad Mohasion FCA From Artisan & Co.
-Institute of Chartered Accountant of Bangladesh (ICAB)
+<h2 className=' text-xl font-semibold '>Masters of Business Administration	Graduation year: 2012</h2>
+ <h2 className=' text-xl font-semibold'>Jagannath University | Major: Accounting &Information Systems	</h2>
+ <br />
+ <br />
+  <hr />
 
 
-
-TRAINING
+<h2 className=' text-2xl text-red-400 font-bold' >PROFESSIONAL QUALIFICATIONS</h2>
+<h3  className=' text-xl font-semibold'>CA- CC Under supervision of Mohammad Mohasion FCA From Artisan & Co.</h3>
+<p  className=' text-xl font-semibold'>Institute of Chartered Accountant of Bangladesh (ICAB)</p>
+<br />
+<hr />
  
-•	Completed Technical and Soft skill training of LICT A project of Bangladesh Computer Council on Office Course
- 
-COMPUTER SKILLS
+<h2 className=' text-2xl text-red-400 font-bold'>SKILLS</h2>
+ <h4  className=' text-xl font-semibold'>Web Development MySQL</h4>
+ <h4  className=' text-xl font-semibold'>HTML</h4>
+ <h4  className=' text-xl font-semibold'>React</h4>
+ <h4  className=' text-xl font-semibold'> JavaScript</h4>
+ <h4  className=' text-xl font-semibold'> Next.js</h4>
+ <h4  className=' text-xl font-semibold'> Express Js</h4>
+ <h4  className=' text-xl font-semibold'> Firebase</h4>
+ <h4  className=' text-xl font-semibold'> MongoDB</h4>
+ <br />
+ <hr />
 
-
-•	Enterprise resource planning (ERP) experience
-•	MS Excel, MS Word & PowerPoint
-•	Outlook & e-mail processing
-
-SPECIAL QUALIFICATION
- 
-•	Teamwork
-•	Good communication skill
-•	Ability to work under pressure
-•	Adaptable
-•	Time management
-
-
+ <h2 className=' text-2xl text-red-400 font-bold'>SPECIAL QUALIFICATION</h2>
+<p  className=' text-xl font-semibold'>•	Teamwork</p>
+<p  className=' text-xl font-semibold'>•	Good communication skill</p>
+<p  className=' text-xl font-semibold'>•	Ability to work under pressure</p>
+<p  className=' text-xl font-semibold'>•	Adaptable</p>
+<p  className=' text-xl font-semibold'>•	Time management</p>
+ <br />
 
 </p>
 
-
- 
-      </View>
-    </Page>
   </Document>
     );
 };

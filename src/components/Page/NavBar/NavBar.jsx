@@ -1,11 +1,32 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Routes/Provider/AuthProvider";
 
 const NavBar = () => {
+
+  const {user, logOut}= useContext(AuthContext);
+  const handelLogOut = ()=>{
+    logOut()
+    .then(result=>{
+      console.log(result.user)
+    })
+    .catch(error=>{
+      console.log(error)
+    })
+
+  }
     const navLinks = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/about'>About</Link></li>
+       <li><Link to='/'>Home</Link></li>
+        {/* <li><Link to='/about'>About</Link></li> */}
+        {user?.email? <> 
+          <li><Link to='/about'>About</Link></li>
+          <li><button onClick={handelLogOut}>Logout</button></li>
+        </> 
+        :
+         
         <li><Link to='/login'>Login</Link></li>
-        <li><Link to='/signUp'>Sign Up</Link></li>
+
+        }
 
         
     </>
@@ -17,7 +38,7 @@ const NavBar = () => {
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="https://i.ibb.co/zX7GdRD/3d-render-camera-icon.jpg" className="h-8" alt="Flowbite Logo" />
-      <span className="self-center text-3xl font-bold whitespace-nowrap dark:text-white text-green-400">MY BLOG</span>
+      <span className="self-center text-3xl font-bold whitespace-nowrap dark:text-white text-green-400">MY CODE JOURNEY</span>
   </a>
   <div className="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
       <button type="button" data-dropdown-toggle="language-dropdown-menu" className="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
